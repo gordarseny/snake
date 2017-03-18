@@ -9,6 +9,7 @@ int main()
 	setlocale(LC_ALL, "rus");
 
 	char *inf1 = "Тест" ;
+	int NumberSurf;
 
 	cout << inf1 << endl;
 
