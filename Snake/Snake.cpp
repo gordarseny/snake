@@ -1,16 +1,41 @@
 #include "stdafx.h"
 
+static void gotoXY(int x, int y)
+{
+	COORD cd;
+
+	cd.X = x;
+	cd.Y = y;
+	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), cd);
+}
+
+static void Draw(char symbol)
+{
+	cout << symbol << endl;
+}
 
 int main()
 {
 	setlocale(LC_ALL, "rus");
 
-	char *inf1 = "Тест" ;
-	int NumberSurf;
+	int x1 = 2;
+	int y1 = 4;
+	char symbol1 = '&';
 
-	cout << inf1 << endl;
+	gotoXY(x1, y1);
+	Draw(symbol1);
+
+	int x2 = 5;
+	int y2 = 7;
+	char symbol2 = '~';
+
+	gotoXY(x2, y2);
+    Draw(symbol2);
+
 
 	system("pause");
     return 0;
 }
+
+
 

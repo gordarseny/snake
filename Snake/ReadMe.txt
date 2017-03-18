@@ -2,4 +2,10 @@
     КОНСОЛЬНОЕ ПРИЛОЖЕНИЕ. Обзор проекта Snake
 ========================================================================
 
-Библиотека <iostream> и "using namespace std;" в ФИК Snake.cpp лежит в ЗФ sdtafx.h
+Библиотеки "stdafx.h":
+ - targetver.h
+ - stdio.h
+ - tchar.h
+ - Windows.h
+ - iostream + using namespace std;
+
