@@ -1,42 +1,59 @@
 #include "stdafx.h"
 
-static void gotoXY(int x, int y)
+class point
+{
+	//Объявление переменных вида PUBLIC, нужно для того, чтобы были годны для всего проекта
+public: 
+	int x;
+	int y;
+	char symbol;
+
+	void gotoXY(int x, int y)
 {
 	COORD cd;
-
 	cd.X = x;
 	cd.Y = y;
 	//Установление курсора по координатам
 	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), cd);
+
 }
 
-static void Draw(char symbol)
+	//Рисование знака
+	void Draw()
 {
-	cout << symbol << endl;
+		cout << symbol << endl;
 }
+};
+
 
 int main()
 {
 	setlocale(LC_ALL, "rus");
 
-	int x1 = 2;
-	int y1 = 4;
-	char symbol1 = '&';
+	//Определения класса в котором происходят действия
+	point p1;
+	p1.x = 7;
+	p1.y = 2;
+	p1.symbol = '&';
 
-	gotoXY(x1, y1);
-	Draw(symbol1);
+	//подключение к функциям из класса POINT
+	p1.gotoXY(p1.x, p1.y);
+	p1.Draw();
+	
+	//Определения класса в котором происходят действия
+	point p2;
+	p2.x = 2;
+	p2.y = 5;
+	p2.symbol = '~';
 
-	int x2 = 5;
-	int y2 = 7;
-	char symbol2 = '~';
-
-	gotoXY(x2, y2);
-    Draw(symbol2);
-
+	//подключение к функциям из класса POINT
+	p2.gotoXY(p2.x, p2.y);
+	p2.Draw();
 
 	system("pause");
     return 0;
 }
+
 
 
 
