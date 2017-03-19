@@ -6,6 +6,7 @@ static void gotoXY(int x, int y)
 
 	cd.X = x;
 	cd.Y = y;
+	//Установление курсора по координатам
 	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), cd);
 }
 
